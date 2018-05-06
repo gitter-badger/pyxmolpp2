@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyxmolpp2.trajectory &mdash; pyxmolpp2 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pyxmolpp2.trjtool" href="trjtool.html" />
+    <link rel="prev" title="pyxmolpp2.polymer" href="polymer.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyxmolpp2
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#atom-residue-chain-references">Atom/Residue/Chain references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#strict-hierarchy-rationale">Strict hierarchy rationale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#keep-your-frame-alive">Keep your frame alive</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/trajectory.html">Trajectory from path</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crystal.html">pyxmolpp2.crystal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">pyxmolpp2.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdb.html">pyxmolpp2.pdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polymer.html">pyxmolpp2.polymer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyxmolpp2.trajectory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trjtool.html">pyxmolpp2.trjtool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxmolpp2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>pyxmolpp2.trajectory</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pyxmolpp2/trajectory.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyxmolpp2.trajectory">
+<span id="pyxmolpp2-trajectory"></span><h1>pyxmolpp2.trajectory<a class="headerlink" href="#module-pyxmolpp2.trajectory" title="Permalink to this headline">¶</a></h1>
+<p>pyxmolpp2.trajectory module</p>
+<dl class="class">
+<dt id="pyxmolpp2.trajectory.Trajectory">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.trajectory.</code><code class="descname">Trajectory</code><span class="sig-paren">(</span><em>self: pyxmolpp2.trajectory.Trajectory</em>, <em>reference: pyxmolpp2.polymer.Frame</em>, <em>check_portions_to_match_reference: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.trajectory.Trajectory.n_frames">
+<code class="descname">n_frames</code><a class="headerlink" href="#pyxmolpp2.trajectory.Trajectory.n_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of frames in trajectory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.Trajectory.push_trajectory_portion">
+<code class="descname">push_trajectory_portion</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.trajectory.Trajectory.push_trajectory_portion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trajectory portion</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.trajectory.TrajectoryPortion" title="pyxmolpp2.trajectory.TrajectoryPortion"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectoryPortion</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.trajectory.Trajectory.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.trajectory.Trajectory.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of frames in trajectory</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.trajectory.TrajectoryException">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.trajectory.</code><code class="descname">TrajectoryException</code><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.trajectory.</code><code class="descname">TrajectoryPortion</code><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion.close">
+<code class="descname">close</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release file handle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion.match">
+<code class="descname">match</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks atom names, residue names and residue ids to match reference_atoms</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="polymer.html#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion.n_atoms_per_frame">
+<code class="descname">n_atoms_per_frame</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion.n_atoms_per_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of atoms per frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion.n_frames">
+<code class="descname">n_frames</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion.n_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of frames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.trajectory.TrajectoryPortion.set_coordinates">
+<code class="descname">set_coordinates</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em>, <em>arg1</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryPortion.set_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set atoms coordinates from frame #frame_index</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>arg1</strong> (<a class="reference internal" href="polymer.html#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.trajectory.TrajectoryRange">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.trajectory.</code><code class="descname">TrajectoryRange</code><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectoryRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.trajectory.TrajectorySlice">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.trajectory.</code><code class="descname">TrajectorySlice</code><a class="headerlink" href="#pyxmolpp2.trajectory.TrajectorySlice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trjtool.html" class="btn btn-neutral float-right" title="pyxmolpp2.trjtool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="polymer.html" class="btn btn-neutral" title="pyxmolpp2.polymer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Sergei Izmailov.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: write_the_docs
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../multiple_versions_build/pyxmolpp2/trajectory.html">multiple_versions_build</a></dd>
+            <dd><a href="trajectory.html">write_the_docs</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
