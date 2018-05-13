@@ -1,0 +1,3043 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyxmolpp2.polymer &mdash; pyxmolpp2 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pyxmolpp2.trajectory" href="trajectory.html" />
+    <link rel="prev" title="pyxmolpp2.pdb" href="pdb.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyxmolpp2
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#atom-residue-chain-references">Atom/Residue/Chain references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#strict-hierarchy-rationale">Strict hierarchy rationale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#keep-your-frame-alive">Keep your frame alive</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/trajectory.html">Trajectory from path</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crystal.html">pyxmolpp2.crystal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">pyxmolpp2.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdb.html">pyxmolpp2.pdb</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyxmolpp2.polymer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">pyxmolpp2.trajectory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trjtool.html">pyxmolpp2.trjtool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxmolpp2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>pyxmolpp2.polymer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pyxmolpp2/polymer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../v0.1.0/pyxmolpp2/polymer.html"><b>Warning:</b> This document is for the development version of pyxmolpp2. The latest version is v0.1.0.</a></p>
+<div class="section" id="module-pyxmolpp2.polymer">
+<span id="pyxmolpp2-polymer"></span><h1>pyxmolpp2.polymer<a class="headerlink" href="#module-pyxmolpp2.polymer" title="Permalink to this headline">¶</a></h1>
+<p>pyxmolpp2.polymer module</p>
+<dl class="class">
+<dt id="pyxmolpp2.polymer.Atom">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">Atom</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Atom.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.polymer.Atom.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.Atom.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Atom.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.Atom.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.aId">
+<code class="descname">aId</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.aId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.aName">
+<code class="descname">aName</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.aName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.cIndex">
+<code class="descname">cIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.cIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.cName">
+<code class="descname">cName</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.cName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain name (chainID in PDB nomenclature)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.chain">
+<code class="descname">chain</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent chain</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Atom.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Atom.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark atom as deleted. Further access to deleted atom is illegal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.fIndex">
+<code class="descname">fIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.fIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.frame">
+<code class="descname">frame</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent frame</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.id">
+<code class="descname">id</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.name">
+<code class="descname">name</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.r">
+<code class="descname">r</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom coordinates</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.rId">
+<code class="descname">rId</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.rId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.rName">
+<code class="descname">rName</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.rName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Atom.residue">
+<code class="descname">residue</code><a class="headerlink" href="#pyxmolpp2.polymer.Atom.residue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent residue, guarantied to be not None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.AtomName">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">AtomName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.AtomName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.AtomName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomName.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.AtomName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.AtomName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomName.str" title="pyxmolpp2.polymer.AtomName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.AtomName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.AtomName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomName.str" title="pyxmolpp2.polymer.AtomName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.AtomName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomName.str" title="pyxmolpp2.polymer.AtomName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomName.str">
+<code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomName.str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.AtomSelection">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">AtomSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Ordered list of atoms.</p>
+<p>Order of atoms within single Residue matches their construction order.
+Atoms from different residues are ordered as parent residues, see ResidueSelection for details.</p>
+<p>Order is preserved across manipulations with AtomSelection</p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>n</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Atom<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get n’th element</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__iadd__">
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__imul__">
+<code class="descname">__imul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__imul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__isub__">
+<code class="descname">__isub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__isub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelectionRange<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelectionRange" title="pyxmolpp2.polymer.AtomSelectionRange"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelectionRange</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of elements</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.asChains">
+<code class="descname">asChains</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.asChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of parent chains</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.asResidues">
+<code class="descname">asResidues</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.asResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of parent residues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>self</em>, <em>predicate</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keeps in selection only elements that match predicate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>predicate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Atom],</span> <span class="pre">bool]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelection.for_each">
+<code class="descname">for_each</code><span class="sig-paren">(</span><em>self</em>, <em>transformation</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.AtomSelection<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.for_each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies (mutating) transformation to atoms</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>transformation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Atom],</span> <span class="pre">None]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.AtomSelection" title="pyxmolpp2.polymer.AtomSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of elements</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelection.toCoords">
+<code class="descname">toCoords</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelection.toCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns copy of atom coordinates</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.AtomSelectionRange">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">AtomSelectionRange</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelectionRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelectionRange.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelectionRange.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.AtomSelectionRange.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.AtomSelectionRange.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.AtomSelectionRange.__next__">
+<code class="descname">__next__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Atom<a class="headerlink" href="#pyxmolpp2.polymer.AtomSelectionRange.__next__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.Chain">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">Chain</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.polymer.Chain.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Chain.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.Chain.__getitem__" title="pyxmolpp2.polymer.Chain.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.Chain.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of residues in chain</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.Chain.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.Chain.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.asAtoms">
+<code class="descname">asAtoms</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.asAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.asResidues">
+<code class="descname">asResidues</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.asResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child residues</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.cIndex">
+<code class="descname">cIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.cIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain index, starts from 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.cName">
+<code class="descname">cName</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.cName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain name (chainID in PDB nomenclature)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Chain.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marks chain as deleted. Further access to deleted chain is illegal</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Chain.emplace">
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Chain.emplace" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.Chain.emplace" title="pyxmolpp2.polymer.Chain.emplace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emplace()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>id</em>, <em>reserve= 0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds an empty Residue to the end of chain</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueName" title="pyxmolpp2.polymer.ResidueName"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueName</span></code></a>) – not documented yet</li>
+<li><strong>id</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</li>
+<li><strong>reserve</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>residue</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds a copy of given Residue to the end of chain</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.fIndex">
+<code class="descname">fIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.fIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.frame">
+<code class="descname">frame</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent frame</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.index">
+<code class="descname">index</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain index, starts from 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.name">
+<code class="descname">name</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain name (chainID in PDB nomenclature)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Chain.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.Chain.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of residues in chain</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ChainName">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ChainName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.ChainName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ChainName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainName.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ChainName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ChainName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainName.str" title="pyxmolpp2.polymer.ChainName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ChainName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ChainName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainName.str" title="pyxmolpp2.polymer.ChainName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ChainName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainName.str" title="pyxmolpp2.polymer.ChainName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainName.str">
+<code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainName.str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ChainSelection">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ChainSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Ordered list of chains.</p>
+<p>Order of chains within single Frame matches their construction order.
+Chains from different frames are ordered as parent frames.</p>
+<p>Frames are ordered by Frame.index. If two frames have identical index, order is undefined.
+Generally it’s a <em>bad</em> idea to have Atom/Residue/Chain selection with elements from two frames with same index.</p>
+<p>Order is preserved across manipulations with ChainSelection</p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>n</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Chain<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get n’th element</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__iadd__">
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__imul__">
+<code class="descname">__imul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__imul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelection.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__isub__">
+<code class="descname">__isub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__isub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelectionRange<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelectionRange" title="pyxmolpp2.polymer.ChainSelectionRange"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelectionRange</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelection.asAtoms">
+<code class="descname">asAtoms</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.asAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child chains</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelection.asResidues">
+<code class="descname">asResidues</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.asResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child residues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>self</em>, <em>predicate</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keeps in selection only elements that match predicate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>predicate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Chain],</span> <span class="pre">bool]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelection.for_each">
+<code class="descname">for_each</code><span class="sig-paren">(</span><em>self</em>, <em>transformation</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ChainSelection<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.for_each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply (mutating) transformation to selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>transformation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Chain],</span> <span class="pre">None]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ChainSelection" title="pyxmolpp2.polymer.ChainSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelection.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelection.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ChainSelectionRange">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ChainSelectionRange</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelectionRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelectionRange.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelectionRange.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ChainSelectionRange.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ChainSelectionRange.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ChainSelectionRange.__next__">
+<code class="descname">__next__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Chain<a class="headerlink" href="#pyxmolpp2.polymer.ChainSelectionRange.__next__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeadAtomSelectionAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeadAtomSelectionAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadAtomSelectionAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadAtomSelectionAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeadAtomSelectionAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadAtomSelectionAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadAtomSelectionAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeadChainSelectionAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeadChainSelectionAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadChainSelectionAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadChainSelectionAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeadChainSelectionAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadChainSelectionAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadChainSelectionAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeadResidueSelectionAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeadResidueSelectionAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadResidueSelectionAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadResidueSelectionAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeadResidueSelectionAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeadResidueSelectionAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeadResidueSelectionAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeletedAtomAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeletedAtomAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedAtomAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedAtomAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeletedAtomAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedAtomAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedAtomAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeletedChainAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeletedChainAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedChainAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedChainAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeletedChainAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedChainAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedChainAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.DeletedResidueAccess">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">DeletedResidueAccess</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedResidueAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedResidueAccess.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.DeletedResidueAccess.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.DeletedResidueAccess.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.DeletedResidueAccess.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.Frame">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">Frame</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.Frame</em>, <em>frame_index: int</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Chain<a class="headerlink" href="#pyxmolpp2.polymer.Frame.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainName" title="pyxmolpp2.polymer.ChainName"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainName</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>frame_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Frame.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frame_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.Frame.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of chains</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.Frame.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.Frame.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.asAtoms">
+<code class="descname">asAtoms</code><a class="headerlink" href="#pyxmolpp2.polymer.Frame.asAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.asChains">
+<code class="descname">asChains</code><a class="headerlink" href="#pyxmolpp2.polymer.Frame.asChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child chains</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.asResidues">
+<code class="descname">asResidues</code><a class="headerlink" href="#pyxmolpp2.polymer.Frame.asResidues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child residues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.emplace">
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Frame.emplace" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.Frame.emplace" title="pyxmolpp2.polymer.Frame.emplace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emplace()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>reserve= 0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds an empty Chain to the end of frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ChainName" title="pyxmolpp2.polymer.ChainName"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainName</span></code></a>) – not documented yet</li>
+<li><strong>reserve</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>chain</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds a copy of given Chain to the end of frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>chain</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Chain" title="pyxmolpp2.polymer.Chain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chain</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.index">
+<code class="descname">index</code><a class="headerlink" href="#pyxmolpp2.polymer.Frame.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Frame.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.Frame.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of chains</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Frame.to_pdb">
+<code class="descname">to_pdb</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Frame.to_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.Frame.to_pdb" title="pyxmolpp2.polymer.Frame.to_pdb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">to_pdb()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">to_pdb</code><span class="sig-paren">(</span><em>self</em>, <em>output_filename</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Writes frame to file using standard PDB records</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>output_filename</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">to_pdb</code><span class="sig-paren">(</span><em>self</em>, <em>output_filename</em>, <em>db</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Writes frame to file using db as non-standard PDB records</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>output_filename</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – not documented yet</li>
+<li><strong>db</strong> (<a class="reference internal" href="pdb.html#pyxmolpp2.pdb.basic_PdbRecords" title="pyxmolpp2.pdb.basic_PdbRecords"><code class="xref py py-class docutils literal notranslate"><span class="pre">basic_PdbRecords</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeAtomSelection">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeAtomSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeAtomSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeAtomSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeAtomSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeAtomSelection.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeAtomSelection.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeChain">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeChain</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeChain.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChain.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeChain.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChain.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeChainSelection">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeChainSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChainSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeChainSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChainSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeChainSelection.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeChainSelection.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeFrame">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeFrame</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeFrame.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeFrame.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeFrame.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeFrame.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidue">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeResidue</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidue.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidue.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidue.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidue.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidueSelection">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">OutOfRangeResidueSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidueSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidueSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidueSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.OutOfRangeResidueSelection.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.polymer.OutOfRangeResidueSelection.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.Residue">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">Residue</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.polymer.Residue.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Atom<a class="headerlink" href="#pyxmolpp2.polymer.Residue.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns first atom in residue with given name. If no atoms with such name exception raised.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomName" title="pyxmolpp2.polymer.AtomName"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomName</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.Residue.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms in residues</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.Residue.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.Residue.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.asAtoms">
+<code class="descname">asAtoms</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.asAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.cIndex">
+<code class="descname">cIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.cIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.cName">
+<code class="descname">cName</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.cName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chain name (chainID in PDB nomenclature)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.chain">
+<code class="descname">chain</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.chain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Residue.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marks residue as deleted. Further access to deleted residue is illegal</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.Residue.emplace">
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.Residue.emplace" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.Residue.emplace" title="pyxmolpp2.polymer.Residue.emplace"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emplace()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>id</em>, <em>r</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds new Atom to the end of residue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.AtomName" title="pyxmolpp2.polymer.AtomName"><code class="xref py py-class docutils literal notranslate"><span class="pre">AtomName</span></code></a>) – not documented yet</li>
+<li><strong>id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>r</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">emplace</code><span class="sig-paren">(</span><em>self</em>, <em>atom</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Adds a copy of given Atom to the end of residue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>atom</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.fIndex">
+<code class="descname">fIndex</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.fIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.frame">
+<code class="descname">frame</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent frame</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.id">
+<code class="descname">id</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.name">
+<code class="descname">name</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.rId">
+<code class="descname">rId</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.rId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.rName">
+<code class="descname">rName</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.rName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residue name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.Residue.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.Residue.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of atoms in residues</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ResidueId">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ResidueId</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pyxmolpp2.polymer.ResidueId) -&gt; None</li>
+<li>__init__(self: pyxmolpp2.polymer.ResidueId, arg0: int) -&gt; None</li>
+<li>__init__(self: pyxmolpp2.polymer.ResidueId, arg0: int, arg1: pyxmolpp2.polymer.ResidueInsertionCode) -&gt; None</li>
+</ol>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__eq__" title="pyxmolpp2.polymer.ResidueId.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__ge__">
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__ge__" title="pyxmolpp2.polymer.ResidueId.__ge__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ge__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__gt__">
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__gt__" title="pyxmolpp2.polymer.ResidueId.__gt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__gt__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__init__" title="pyxmolpp2.polymer.ResidueId.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em>, <em>arg1</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>arg1</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueInsertionCode" title="pyxmolpp2.polymer.ResidueInsertionCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueInsertionCode</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__le__">
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__le__" title="pyxmolpp2.polymer.ResidueId.__le__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__le__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__lt__">
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__lt__" title="pyxmolpp2.polymer.ResidueId.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueId.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__ne__">
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.ResidueId.__ne__" title="pyxmolpp2.polymer.ResidueId.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__ne__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueId" title="pyxmolpp2.polymer.ResidueId"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueId</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueId.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueId.iCode">
+<code class="descname">iCode</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.iCode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueId.serial">
+<code class="descname">serial</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueId.serial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ResidueInsertionCode</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.ResidueInsertionCode</em>, <em>arg0: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueInsertionCode.str" title="pyxmolpp2.polymer.ResidueInsertionCode.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueInsertionCode.str" title="pyxmolpp2.polymer.ResidueInsertionCode.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueInsertionCode.str" title="pyxmolpp2.polymer.ResidueInsertionCode.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueInsertionCode.str">
+<code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueInsertionCode.str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ResidueName">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ResidueName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.ResidueName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueName.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueName.str" title="pyxmolpp2.polymer.ResidueName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueName.str" title="pyxmolpp2.polymer.ResidueName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueName.str" title="pyxmolpp2.polymer.ResidueName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueName.str">
+<code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueName.str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ResidueSelection">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ResidueSelection</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Ordered list of residues.</p>
+<p>Order of residues within single Chain matches their construction order.
+Residues from different chains are ordered as parent chains, see ChainSelection for details.</p>
+<p>Order is preserved across manipulations with ResidueSelection</p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>n</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Residue<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get n’th element</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__iadd__">
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__imul__">
+<code class="descname">__imul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__imul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__isub__">
+<code class="descname">__isub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__isub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelectionRange<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelectionRange" title="pyxmolpp2.polymer.ResidueSelectionRange"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelectionRange</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of elements</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelection.asAtoms">
+<code class="descname">asAtoms</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.asAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of child atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelection.asChains">
+<code class="descname">asChains</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.asChains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns selection of parent chains</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>self</em>, <em>predicate</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keeps in selection only elements that match predicate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>predicate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Residue],</span> <span class="pre">bool]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelection.for_each">
+<code class="descname">for_each</code><span class="sig-paren">(</span><em>self</em>, <em>transformation</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.ResidueSelection<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.for_each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply (mutating) transformation to selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>transformation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Residue],</span> <span class="pre">None]</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.ResidueSelection" title="pyxmolpp2.polymer.ResidueSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResidueSelection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelection.size">
+<code class="descname">size</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelection.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of elements</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.ResidueSelectionRange">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">ResidueSelectionRange</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelectionRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelectionRange.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelectionRange.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.ResidueSelectionRange.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelectionRange.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.ResidueSelectionRange.__next__">
+<code class="descname">__next__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.polymer.Residue<a class="headerlink" href="#pyxmolpp2.polymer.ResidueSelectionRange.__next__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.TorsionAngle">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">TorsionAngle</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Holds references to 4 atoms, and optionally to a Callable-&gt;AtomSelection. If Callable is supplied, the set operation is available.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngle.__init__" title="pyxmolpp2.polymer.TorsionAngle.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>d</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>affected_atoms_selector</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>d</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>affected_atoms_selector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom],</span> <span class="pre">pyxmolpp2.polymer.AtomSelection]</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngle.__init__" title="pyxmolpp2.polymer.TorsionAngle.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>d</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>affected_atoms_selector</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>d</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Atom" title="pyxmolpp2.polymer.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>) – not documented yet</li>
+<li><strong>affected_atoms_selector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom,</span> <span class="pre">pyxmolpp2.polymer.Atom],</span> <span class="pre">pyxmolpp2.polymer.AtomSelection]</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.TorsionAngle.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngle.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngle.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>self</em>, <em>value</em>, <em>noop_tolerance</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngle.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform rotation around torsion angle, all dependent atoms are also rotated.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Must be constructed with <cite>affected_atoms_selector</cite> argument</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>value</strong> – target value of torsion angle</li>
+<li><strong>noop_tolerance</strong> – if current angle is close enough to target <cite>value</cite> rotation is not performed, default=`Degrees(0.01)`</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngle.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngle.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="geometry.html#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">TorsionAngleFactory</code><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.chi1">
+<code class="descname">chi1</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.chi1" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.chi2">
+<code class="descname">chi2</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.chi2" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.chi3">
+<code class="descname">chi3</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.chi3" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.chi4">
+<code class="descname">chi4</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.chi4" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.chi5">
+<code class="descname">chi5</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.chi5" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>residue</em>, <em>torsion_name</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.get" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</li>
+<li><strong>torsion_name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngleName" title="pyxmolpp2.polymer.TorsionAngleName"><code class="xref py py-class docutils literal notranslate"><span class="pre">TorsionAngleName</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.omega">
+<code class="descname">omega</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.omega" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.phi">
+<code class="descname">phi</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.phi" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleFactory.psi">
+<code class="descname">psi</code><span class="sig-paren">(</span><em>residue</em><span class="sig-paren">)</span> &#x2192; Optional[pyxmolpp2.polymer.TorsionAngle]<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleFactory.psi" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residue</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.Residue" title="pyxmolpp2.polymer.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optional[pyxmolpp2.polymer.TorsionAngle]</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.polymer.TorsionAngleName">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.polymer.</code><code class="descname">TorsionAngleName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.polymer.TorsionAngleName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngleName.str" title="pyxmolpp2.polymer.TorsionAngleName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.polymer'</em><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngleName.str" title="pyxmolpp2.polymer.TorsionAngleName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.polymer.TorsionAngleName.str" title="pyxmolpp2.polymer.TorsionAngleName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.polymer.TorsionAngleName.str">
+<code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.polymer.TorsionAngleName.str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trajectory.html" class="btn btn-neutral float-right" title="pyxmolpp2.trajectory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pdb.html" class="btn btn-neutral" title="pyxmolpp2.pdb" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Sergei Izmailov.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../v0.1.0/pyxmolpp2/polymer.html">v0.1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../dev/pyxmolpp2/polymer.html">dev</a></dd>
+            <dd><a href="polymer.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,2106 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyxmolpp2.geometry &mdash; pyxmolpp2 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pyxmolpp2.pdb" href="pdb.html" />
+    <link rel="prev" title="pyxmolpp2.crystal" href="crystal.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyxmolpp2
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#atom-residue-chain-references">Atom/Residue/Chain references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#strict-hierarchy-rationale">Strict hierarchy rationale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#keep-your-frame-alive">Keep your frame alive</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/trajectory.html">Trajectory from path</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crystal.html">pyxmolpp2.crystal</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyxmolpp2.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdb.html">pyxmolpp2.pdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polymer.html">pyxmolpp2.polymer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">pyxmolpp2.trajectory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trjtool.html">pyxmolpp2.trjtool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxmolpp2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>pyxmolpp2.geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pyxmolpp2/geometry.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../v0.1.0/pyxmolpp2/geometry.html"><b>Warning:</b> This document is for the development version of pyxmolpp2. The latest version is v0.1.0.</a></p>
+<div class="section" id="module-pyxmolpp2.geometry">
+<span id="pyxmolpp2-geometry"></span><h1>pyxmolpp2.geometry<a class="headerlink" href="#module-pyxmolpp2.geometry" title="Permalink to this headline">¶</a></h1>
+<p>pyxmolpp2.geometry module</p>
+<dl class="exception">
+<dt id="pyxmolpp2.geometry.AlignmentError">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">AlignmentError</code><a class="headerlink" href="#pyxmolpp2.geometry.AlignmentError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.geometry.GeometryException" title="pyxmolpp2.geometry.GeometryException"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.geometry.GeometryException</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.AlignmentError.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.AlignmentError.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.AngleValue">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">AngleValue</code><a class="headerlink" href="#pyxmolpp2.geometry.AngleValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__ge__">
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__gt__">
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.AngleValue.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__le__">
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__lt__">
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.AngleValue.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__neg__">
+<code class="descname">__neg__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__neg__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.__truediv__">
+<code class="descname">__truediv__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.__truediv__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.AngleValue.degrees">
+<code class="descname">degrees</code><a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.degrees" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.AngleValue.radians">
+<code class="descname">radians</code><a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.radians" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.AngleValue.to_standard_range">
+<code class="descname">to_standard_range</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.AngleValue.to_standard_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns angle to range [-Pi..Pi)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.geometry.BadRotationMatrix">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">BadRotationMatrix</code><a class="headerlink" href="#pyxmolpp2.geometry.BadRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.geometry.GeometryException" title="pyxmolpp2.geometry.GeometryException"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.geometry.GeometryException</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.BadRotationMatrix.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.BadRotationMatrix.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.Degrees">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">Degrees</code><span class="sig-paren">(</span><em>degrees</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.Degrees" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>degrees</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyxmolpp2.geometry.GeometryException">
+<em class="property">exception </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">GeometryException</code><a class="headerlink" href="#pyxmolpp2.geometry.GeometryException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.GeometryException.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.GeometryException.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.GeometryException.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.geometry.GeometryException.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.Radians">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">Radians</code><span class="sig-paren">(</span><em>radians</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.Radians" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>radians</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.Rotation3d">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">Rotation3d</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Represents 3d rotation</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d.__init__" title="pyxmolpp2.geometry.Rotation3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>rotation_axis</em>, <em>rotation_angle</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rotation_axis</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>rotation_angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d.__init__" title="pyxmolpp2.geometry.Rotation3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>rotation_axis</em>, <em>rotation_angle</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rotation_axis</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>rotation_angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.Rotation3d.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d.__mul__" title="pyxmolpp2.geometry.Rotation3d.__mul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__mul__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d.__rmul__" title="pyxmolpp2.geometry.Rotation3d.__rmul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__rmul__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.axis">
+<code class="descname">axis</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns axis of rotation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.inverted">
+<code class="descname">inverted</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Rotation3d<a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.inverted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns inverted rotation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.theta">
+<code class="descname">theta</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns angle of rotation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Rotation3d.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>self</em>, <em>r</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.Rotation3d.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns rotated point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.Transformation3d">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">Transformation3d</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Represents arbitrary 3d transformation. The result of mixing two of <a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>, <a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>, <a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a> or <a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></p>
+<p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pyxmolpp2.geometry.Transformation3d) -&gt; None</li>
+<li>__init__(self: pyxmolpp2.geometry.Transformation3d, rotation_followed_by: pyxmolpp2.geometry.Rotation3d, translation: pyxmolpp2.geometry.Translation3d) -&gt; None</li>
+</ol>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Transformation3d.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d.__init__" title="pyxmolpp2.geometry.Transformation3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>rotation_followed_by</em>, <em>translation</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rotation_followed_by</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a>) – not documented yet</li>
+<li><strong>translation</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.Transformation3d.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Transformation3d.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d.__mul__" title="pyxmolpp2.geometry.Transformation3d.__mul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__mul__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Transformation3d.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d.__rmul__" title="pyxmolpp2.geometry.Transformation3d.__rmul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__rmul__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Rotation3d" title="pyxmolpp2.geometry.Rotation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rotation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Transformation3d.inverted">
+<code class="descname">inverted</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Transformation3d<a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.inverted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns inverted transformation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Transformation3d.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>self</em>, <em>r</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.Transformation3d.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns transformed point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.Translation3d">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">Translation3d</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Translation3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Represents translation by 3d vector</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Translation3d.__init__" title="pyxmolpp2.geometry.Translation3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Translation3d.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Identity transformation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>dr</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> – translation vector</li>
+<li><strong>dr</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.Translation3d.__init__" title="pyxmolpp2.geometry.Translation3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Identity transformation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>dr</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> – translation vector</li>
+<li><strong>dr</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.Translation3d.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Translation3d.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Translation3d<a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Translation3d.dr">
+<code class="descname">dr</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.dr" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Translation3d.inverted">
+<code class="descname">inverted</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Translation3d<a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.inverted" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.Translation3d.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>self</em>, <em>r</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.Translation3d.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns translated point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.UniformScale3d">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">UniformScale3d</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Represents unform 3d scaling</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d.__init__" title="pyxmolpp2.geometry.UniformScale3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.UniformScale3d.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>scale_factor</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scale_factor</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d.__init__" title="pyxmolpp2.geometry.UniformScale3d.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>scale_factor</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>scale_factor</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.UniformScale3d.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.UniformScale3d.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d.__mul__" title="pyxmolpp2.geometry.UniformScale3d.__mul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__mul__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.UniformScale3d.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Transformation3d<a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Translation3d" title="pyxmolpp2.geometry.Translation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Translation3d</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.UniformScale3d.inverted">
+<code class="descname">inverted</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.UniformScale3d<a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.inverted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns inverted scale transformation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.UniformScale3d" title="pyxmolpp2.geometry.UniformScale3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformScale3d</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.UniformScale3d.scale">
+<code class="descname">scale</code><a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale factor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.UniformScale3d.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>self</em>, <em>r</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.UniformScale3d.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns scaled point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.VectorXYZ">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">VectorXYZ</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pyxmolpp2.geometry.VectorXYZ) -&gt; None</li>
+<li>__init__(self: pyxmolpp2.geometry.VectorXYZ, arg0: pyxmolpp2.geometry.VectorXYZ) -&gt; None</li>
+</ol>
+<p>Copy constructor</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pyxmolpp2.geometry.VectorXYZ, arg0: iterable) -&gt; None</li>
+</ol>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__bool__">
+<code class="descname">__bool__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__bool__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the list is nonempty</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__delitem__">
+<code class="descname">__delitem__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__delitem__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ.__delitem__" title="pyxmolpp2.geometry.VectorXYZ.__delitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__delitem__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__delitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Delete the list elements at index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__delitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Delete list elements using a slice object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ.__getitem__" title="pyxmolpp2.geometry.VectorXYZ.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>s</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Retrieve list elements using a slice object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ.__init__" title="pyxmolpp2.geometry.VectorXYZ.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Copy constructor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">iterable</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; iterator<a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">iterator</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__len__">
+<code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.__setitem__">
+<code class="descname">__setitem__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ.__setitem__" title="pyxmolpp2.geometry.VectorXYZ.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__setitem__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__setitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em>, <em>arg1</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>arg1</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__setitem__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em>, <em>arg1</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Assign list elements using a slice object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code>) – not documented yet</li>
+<li><strong>arg1</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>self</em>, <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item to the end of the list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.extend">
+<code class="descname">extend</code><span class="sig-paren">(</span><em>self</em>, <em>L</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.extend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend the list by appending all the items in the given list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>L</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.insert">
+<code class="descname">insert</code><span class="sig-paren">(</span><em>self</em>, <em>i</em>, <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert an item at a given position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>x</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.VectorXYZ.pop">
+<code class="descname">pop</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.VectorXYZ.pop" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ.pop" title="pyxmolpp2.geometry.VectorXYZ.pop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pop()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">pop</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Remove and return the last item</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">pop</code><span class="sig-paren">(</span><em>self</em>, <em>i</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Remove and return the item at index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>i</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.geometry.XYZ">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">XYZ</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.XYZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Cartesian 3d vector</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.XYZ.__init__" title="pyxmolpp2.geometry.XYZ.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Equivalent to XYZ(0,0,0)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Initialize with x, y, z</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>z</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.XYZ.__init__" title="pyxmolpp2.geometry.XYZ.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Equivalent to XYZ(0,0,0)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Initialize with x, y, z</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>z</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.XYZ.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.geometry'</em><a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__neg__">
+<code class="descname">__neg__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__neg__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.__truediv__">
+<code class="descname">__truediv__</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.__truediv__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.cross">
+<code class="descname">cross</code><span class="sig-paren">(</span><em>self</em>, <em>rhs</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.cross" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cross product</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rhs</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.dot">
+<code class="descname">dot</code><span class="sig-paren">(</span><em>self</em>, <em>rhs</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dot product</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rhs</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.len">
+<code class="descname">len</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns vector length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.geometry.XYZ.len2">
+<code class="descname">len2</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.XYZ.len2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns vector length squared</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.XYZ.x">
+<code class="descname">x</code><a class="headerlink" href="#pyxmolpp2.geometry.XYZ.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x coordinate</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.XYZ.y">
+<code class="descname">y</code><a class="headerlink" href="#pyxmolpp2.geometry.XYZ.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y coordinate</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.geometry.XYZ.z">
+<code class="descname">z</code><a class="headerlink" href="#pyxmolpp2.geometry.XYZ.z" title="Permalink to this definition">¶</a></dt>
+<dd><p>z coordinate</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.angle">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">angle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate angle a-b-c</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.calc_alignment">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">calc_alignment</code><span class="sig-paren">(</span><em>ref</em>, <em>var</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.Transformation3d<a class="headerlink" href="#pyxmolpp2.geometry.calc_alignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate transformation to superimpose var over ref</p>
+<dl class="docutils">
+<dt>Preconditions:</dt>
+<dd><ol class="first last arabic simple">
+<li>len(ref) == len(var)</li>
+<li>len(ref) &gt;= 3</li>
+</ol>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ref</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+<li><strong>var</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.calc_geom_center">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">calc_geom_center</code><span class="sig-paren">(</span><em>coords</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.geometry.calc_geom_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mean coordinates</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coords</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.calc_rmsd">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">calc_rmsd</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.geometry.calc_rmsd" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.geometry.calc_rmsd" title="pyxmolpp2.geometry.calc_rmsd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">calc_rmsd()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">calc_rmsd</code><span class="sig-paren">(</span><em>ref</em>, <em>var</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Calculate RMSD between ref and var</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ref</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+<li><strong>var</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">calc_rmsd</code><span class="sig-paren">(</span><em>ref</em>, <em>var</em>, <em>T</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<p>Calculate RMSD between ref and T*var</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ref</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+<li><strong>var</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.VectorXYZ" title="pyxmolpp2.geometry.VectorXYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorXYZ</span></code></a>) – not documented yet</li>
+<li><strong>T</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.Transformation3d" title="pyxmolpp2.geometry.Transformation3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation3d</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.cos">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">cos</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.cos" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.degrees_to_radians">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">degrees_to_radians</code><span class="sig-paren">(</span><em>degrees</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.degrees_to_radians" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>degrees</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.dihedral_angle">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">dihedral_angle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em>, <em>d</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.dihedral_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate dihedral angle between planes (a,b,c) and (b,c,d)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>c</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>d</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.distance">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">distance</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate distance between two points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> – first point</li>
+<li><strong>b</strong> – second point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.distance2">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">distance2</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.distance2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate distance square between two points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>b</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.fabs">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">fabs</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.AngleValue<a class="headerlink" href="#pyxmolpp2.geometry.fabs" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.radians_to_degrees">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">radians_to_degrees</code><span class="sig-paren">(</span><em>radians</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.radians_to_degrees" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>radians</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.sin">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">sin</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.sin" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyxmolpp2.geometry.tan">
+<code class="descclassname">pyxmolpp2.geometry.</code><code class="descname">tan</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pyxmolpp2.geometry.tan" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle</strong> (<a class="reference internal" href="#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pdb.html" class="btn btn-neutral float-right" title="pyxmolpp2.pdb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crystal.html" class="btn btn-neutral" title="pyxmolpp2.crystal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Sergei Izmailov.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../v0.1.0/pyxmolpp2/geometry.html">v0.1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../dev/pyxmolpp2/geometry.html">dev</a></dd>
+            <dd><a href="geometry.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

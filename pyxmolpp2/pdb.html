@@ -163,7 +163,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pyxmolpp2.pdb">
+  
+
+
+
+
+
+<div class="section" id="module-pyxmolpp2.pdb">
 <span id="pyxmolpp2-pdb"></span><h1>pyxmolpp2.pdb<a class="headerlink" href="#module-pyxmolpp2.pdb" title="Permalink to this headline">¶</a></h1>
 <p>pyxmolpp2.pdb module</p>
 <dl class="class">
@@ -171,6 +177,24 @@
 <em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">AlteredPdbRecords</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.AlteredPdbRecords</em>, <em>basic: pyxmolpp2.pdb.basic_PdbRecords</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.pdb.basic_PdbRecords" title="pyxmolpp2.pdb.basic_PdbRecords"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.pdb.basic_PdbRecords</span></code></a></p>
 <p>Provides flexibility for reading/writing non-standard PDB files</p>
+<dl class="method">
+<dt id="pyxmolpp2.pdb.AlteredPdbRecords.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>basic</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>basic</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.basic_PdbRecords" title="pyxmolpp2.pdb.basic_PdbRecords"><code class="xref py py-class docutils literal notranslate"><span class="pre">basic_PdbRecords</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.AlteredPdbRecords.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="pyxmolpp2.pdb.AlteredPdbRecords.alter_record">
 <code class="descname">alter_record</code><span class="sig-paren">(</span><em>self</em>, <em>record_name</em>, <em>field_name</em>, <em>colons</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords.alter_record" title="Permalink to this definition">¶</a></dt>
@@ -192,12 +216,12 @@
 
 <dl class="method">
 <dt id="pyxmolpp2.pdb.AlteredPdbRecords.get_record">
-<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>record_name</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.AlteredPdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record_name</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.PdbRecordType" title="pyxmolpp2.pdb.PdbRecordType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PdbRecordType</span></code></a></td>
 </tr>
@@ -209,8 +233,57 @@
 
 <dl class="class">
 <dt id="pyxmolpp2.pdb.FieldName">
-<em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">FieldName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.FieldName</em>, <em>arg0: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.FieldName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">FieldName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.FieldName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.FieldName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.FieldName.__hash__">
+<code class="descname">__hash__</code><a class="headerlink" href="#pyxmolpp2.pdb.FieldName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.FieldName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.FieldName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.FieldName.str" title="pyxmolpp2.pdb.FieldName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.FieldName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.FieldName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.FieldName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.pdb.FieldName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.FieldName.str" title="pyxmolpp2.pdb.FieldName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.FieldName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.pdb.FieldName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.FieldName.str" title="pyxmolpp2.pdb.FieldName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pyxmolpp2.pdb.FieldName.str">
 <code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.pdb.FieldName.str" title="Permalink to this definition">¶</a></dt>
@@ -222,18 +295,52 @@
 <dt id="pyxmolpp2.pdb.PdbException">
 <em class="property">exception </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbException</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbException.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbException.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbException.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbException.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="exception">
 <dt id="pyxmolpp2.pdb.PdbFieldReadError">
 <em class="property">exception </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbFieldReadError</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbFieldReadError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.pdb.PdbException" title="pyxmolpp2.pdb.PdbException"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.pdb.PdbException</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbFieldReadError.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbFieldReadError.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pyxmolpp2.pdb.PdbFile">
 <em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbFile</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.PdbFile</em>, <em>filename: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.PdbFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="trajectory.html#pyxmolpp2.trajectory.TrajectoryPortion" title="pyxmolpp2.trajectory.TrajectoryPortion"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.trajectory.TrajectoryPortion</span></code></a></p>
+<dl class="method">
+<dt id="pyxmolpp2.pdb.PdbFile.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.PdbFile.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbFile.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbFile.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="pyxmolpp2.pdb.PdbFile.close">
 <code class="descname">close</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.PdbFile.close" title="Permalink to this definition">¶</a></dt>
@@ -337,24 +444,94 @@
 <dt id="pyxmolpp2.pdb.PdbRecordType">
 <em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbRecordType</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbRecordType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbRecordType.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbRecordType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbRecordType.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbRecordType.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="exception">
 <dt id="pyxmolpp2.pdb.PdbUknownRecord">
 <em class="property">exception </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbUknownRecord</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbUknownRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.pdb.PdbException" title="pyxmolpp2.pdb.PdbException"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.pdb.PdbException</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbUknownRecord.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbUknownRecord.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="exception">
 <dt id="pyxmolpp2.pdb.PdbUknownRecordField">
 <em class="property">exception </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">PdbUknownRecordField</code><a class="headerlink" href="#pyxmolpp2.pdb.PdbUknownRecordField" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.pdb.PdbException" title="pyxmolpp2.pdb.PdbException"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.pdb.PdbException</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.PdbUknownRecordField.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.PdbUknownRecordField.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pyxmolpp2.pdb.RecordName">
-<em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">RecordName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.RecordName</em>, <em>arg0: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.RecordName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">RecordName</code><span class="sig-paren">(</span><em>self: pyxmolpp2.pdb.RecordName</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.RecordName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.RecordName.__hash__">
+<code class="descname">__hash__</code><a class="headerlink" href="#pyxmolpp2.pdb.RecordName.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.RecordName.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.pdb.RecordName.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName.str" title="pyxmolpp2.pdb.RecordName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.RecordName.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.RecordName.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.RecordName.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.pdb.RecordName.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.RecordName.str" title="pyxmolpp2.pdb.RecordName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.pdb.RecordName.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pyxmolpp2.pdb.RecordName.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.RecordName.str" title="pyxmolpp2.pdb.RecordName.str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pyxmolpp2.pdb.RecordName.str">
 <code class="descname">str</code><a class="headerlink" href="#pyxmolpp2.pdb.RecordName.str" title="Permalink to this definition">¶</a></dt>
@@ -366,14 +543,25 @@
 <dt id="pyxmolpp2.pdb.StandardPdbRecords">
 <em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">StandardPdbRecords</code><a class="headerlink" href="#pyxmolpp2.pdb.StandardPdbRecords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pyxmolpp2.pdb.basic_PdbRecords" title="pyxmolpp2.pdb.basic_PdbRecords"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyxmolpp2.pdb.basic_PdbRecords</span></code></a></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.StandardPdbRecords.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.pdb.StandardPdbRecords.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.StandardPdbRecords.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.StandardPdbRecords.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="pyxmolpp2.pdb.StandardPdbRecords.get_record">
-<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.StandardPdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>record_name</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.StandardPdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record_name</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.PdbRecordType" title="pyxmolpp2.pdb.PdbRecordType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PdbRecordType</span></code></a></td>
 </tr>
@@ -400,14 +588,25 @@
 <dt id="pyxmolpp2.pdb.basic_PdbRecords">
 <em class="property">class </em><code class="descclassname">pyxmolpp2.pdb.</code><code class="descname">basic_PdbRecords</code><a class="headerlink" href="#pyxmolpp2.pdb.basic_PdbRecords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.basic_PdbRecords.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pyxmolpp2.pdb.basic_PdbRecords.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.pdb.basic_PdbRecords.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.pdb'</em><a class="headerlink" href="#pyxmolpp2.pdb.basic_PdbRecords.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="pyxmolpp2.pdb.basic_PdbRecords.get_record">
-<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>arg0</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.basic_PdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_record</code><span class="sig-paren">(</span><em>self</em>, <em>record_name</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.pdb.PdbRecordType<a class="headerlink" href="#pyxmolpp2.pdb.basic_PdbRecords.get_record" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg0</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>record_name</strong> (<a class="reference internal" href="#pyxmolpp2.pdb.RecordName" title="pyxmolpp2.pdb.RecordName"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordName</span></code></a>) – not documented yet</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyxmolpp2.pdb.PdbRecordType" title="pyxmolpp2.pdb.PdbRecordType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PdbRecordType</span></code></a></td>
 </tr>
@@ -457,14 +656,18 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Other Versions</span>
-        v: write_the_docs
+        v: v0.1.0
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
         <dl>
+            <dt>Tags</dt>
+            <dd><a href="../v0.1.0/pyxmolpp2/pdb.html">v0.1.0</a></dd>
+        </dl>
+        <dl>
             <dt>Branches</dt>
-            <dd><a href="../multiple_versions_build/pyxmolpp2/pdb.html">multiple_versions_build</a></dd>
-            <dd><a href="../write_the_docs/pyxmolpp2/pdb.html">write_the_docs</a></dd>
+            <dd><a href="../dev/pyxmolpp2/pdb.html">dev</a></dd>
+            <dd><a href="../master/pyxmolpp2/pdb.html">master</a></dd>
         </dl>
     </div>
 </div>

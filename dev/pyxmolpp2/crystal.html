@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyxmolpp2.crystal &mdash; pyxmolpp2 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pyxmolpp2.geometry" href="geometry.html" />
+    <link rel="prev" title="Trajectory from path" href="../examples/trajectory.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyxmolpp2
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#atom-residue-chain-references">Atom/Residue/Chain references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#strict-hierarchy-rationale">Strict hierarchy rationale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/first_steps.html#keep-your-frame-alive">Keep your frame alive</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/trajectory.html">Trajectory from path</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyxmolpp2.crystal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">pyxmolpp2.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdb.html">pyxmolpp2.pdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polymer.html">pyxmolpp2.polymer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">pyxmolpp2.trajectory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trjtool.html">pyxmolpp2.trjtool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxmolpp2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>pyxmolpp2.crystal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pyxmolpp2/crystal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../v0.1.0/pyxmolpp2/crystal.html"><b>Warning:</b> This document is for the development version of pyxmolpp2. The latest version is v0.1.0.</a></p>
+<div class="section" id="module-pyxmolpp2.crystal">
+<span id="pyxmolpp2-crystal"></span><h1>pyxmolpp2.crystal<a class="headerlink" href="#module-pyxmolpp2.crystal" title="Permalink to this headline">¶</a></h1>
+<p>pyxmolpp2.crystal module</p>
+<dl class="class">
+<dt id="pyxmolpp2.crystal.BestShiftFinder">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.crystal.</code><code class="descname">BestShiftFinder</code><span class="sig-paren">(</span><em>self: pyxmolpp2.crystal.BestShiftFinder</em>, <em>lattice_vectors: pyxmolpp2.crystal.LatticeVectors</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.BestShiftFinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="pyxmolpp2.crystal.BestShiftFinder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>lattice_vectors</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.BestShiftFinder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lattice_vectors</strong> (<a class="reference internal" href="#pyxmolpp2.crystal.LatticeVectors" title="pyxmolpp2.crystal.LatticeVectors"><code class="xref py py-class docutils literal notranslate"><span class="pre">LatticeVectors</span></code></a>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.crystal.BestShiftFinder.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.crystal'</em><a class="headerlink" href="#pyxmolpp2.crystal.BestShiftFinder.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.BestShiftFinder.find_best_shift">
+<code class="descname">find_best_shift</code><span class="sig-paren">(</span><em>self</em>, <em>ref</em>, <em>var</em><span class="sig-paren">)</span> &#x2192; Tuple[float, pyxmolpp2.geometry.XYZ]<a class="headerlink" href="#pyxmolpp2.crystal.BestShiftFinder.find_best_shift" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ref</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>var</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple[float,</span> <span class="pre">pyxmolpp2.geometry.XYZ]</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.BestShiftFinder.scale_lattice_by">
+<code class="descname">scale_lattice_by</code><span class="sig-paren">(</span><em>self</em>, <em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.BestShiftFinder.scale_lattice_by" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyxmolpp2.crystal.LatticeVectors">
+<em class="property">class </em><code class="descclassname">pyxmolpp2.crystal.</code><code class="descname">LatticeVectors</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pyxmolpp2.crystal.LatticeVectors, v1: pyxmolpp2.geometry.XYZ, v2: pyxmolpp2.geometry.XYZ, v3: pyxmolpp2.geometry.XYZ) -&gt; None</li>
+<li>__init__(self: pyxmolpp2.crystal.LatticeVectors, a: float, b: float, c: float, alpha: pyxmolpp2.geometry.AngleValue, beta: pyxmolpp2.geometry.AngleValue, gamma: pyxmolpp2.geometry.AngleValue) -&gt; None</li>
+</ol>
+<dl class="method">
+<dt id="pyxmolpp2.crystal.LatticeVectors.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>i</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>i</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.LatticeVectors.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are several overloads for <a class="reference internal" href="#pyxmolpp2.crystal.LatticeVectors.__init__" title="pyxmolpp2.crystal.LatticeVectors.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a></p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>v1</em>, <em>v2</em>, <em>v3</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v1</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>v2</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>v3</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>alpha</em>, <em>beta</em>, <em>gamma</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>c</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</li>
+<li><strong>alpha</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</li>
+<li><strong>beta</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</li>
+<li><strong>gamma</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.AngleValue" title="pyxmolpp2.geometry.AngleValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngleValue</span></code></a>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyxmolpp2.crystal.LatticeVectors.__module__">
+<code class="descname">__module__</code><em class="property"> = 'pyxmolpp2.crystal'</em><a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.LatticeVectors.get_shift">
+<code class="descname">get_shift</code><span class="sig-paren">(</span><em>self</em>, <em>i</em>, <em>j</em>, <em>k</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.get_shift" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>i</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>j</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.LatticeVectors.scale_by">
+<code class="descname">scale_by</code><span class="sig-paren">(</span><em>self</em>, <em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.scale_by" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – not documented yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyxmolpp2.crystal.LatticeVectors.translate">
+<code class="descname">translate</code><span class="sig-paren">(</span><em>self</em>, <em>r</em>, <em>i</em>, <em>j</em>, <em>k</em><span class="sig-paren">)</span> &#x2192; pyxmolpp2.geometry.XYZ<a class="headerlink" href="#pyxmolpp2.crystal.LatticeVectors.translate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>r</strong> (<a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a>) – not documented yet</li>
+<li><strong>i</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>j</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+<li><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – not documented yet</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="geometry.html#pyxmolpp2.geometry.XYZ" title="pyxmolpp2.geometry.XYZ"><code class="xref py py-class docutils literal notranslate"><span class="pre">XYZ</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="geometry.html" class="btn btn-neutral float-right" title="pyxmolpp2.geometry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../examples/trajectory.html" class="btn btn-neutral" title="Trajectory from path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Sergei Izmailov.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: dev
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../v0.1.0/pyxmolpp2/crystal.html">v0.1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="crystal.html">dev</a></dd>
+            <dd><a href="../../master/pyxmolpp2/crystal.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
